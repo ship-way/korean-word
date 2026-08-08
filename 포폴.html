@@ -1,0 +1,289 @@
+<? include "header.html" ?>
+<body id="index">
+    <header>
+        <div class="wrap">
+            <ul>
+                <li>
+                    <a href="#">
+                        about
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        potfolio
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="blank"></div>
+    
+       
+    <section id="about">
+        <div class="wrap">
+            <h1>about</h1>
+            <div class="info cl">
+                <img src="images/profil.jpg" alt="신지윤 증명사진">
+                <div class="right">
+                    <h2>신지윤<span>(만 26세)</span></h2>
+                    <div class="cl">
+                        <dl>
+                            <dt>자격증</dt>
+                            <dd>스프레드시트(엑셀)</dd>
+                            <dd>2종 보통 운전면허</dd>
+                            <dd>GTQ(포토샵) 1급</dd>
+ 			    <dd>GTQ(포토샵) 1급</dd>	
+                        </dl>
+                        <dl>
+                            <dt>경력</dt>
+                            <dd>하임엔헷세드(아동복) 2년차</dd>
+			    <dd>상세페이지 및 배너 제작</dd>
+			    <dd>웹사이트 업로드 및 관리</dd>
+                            </dl>
+                    </div>
+                </div>
+            </div>
+            <ul class="ability">
+                <li>
+                   <p>사용툴</p>
+		  <img src="" alt="포토샵">
+		  <img src="" alt="일러스트">
+		  <img src="" alt="피그마">
+		  <img src="" alt="카페24">
+               </li>
+                <li>
+                   <p>사용기술</p>
+		  <img src="" alt="html">
+		  <img src="" alt="css">
+		  <img src="" alt="js">
+               </li>
+               </ul>
+        </div>
+    </section>
+    
+    <section id="portfolio">
+        <div class="wrap">
+            <h1>portfolio</h1>
+        </div>    
+  	<div class="slide">
+		<a href="">
+                      <img src="images/deagu_code.jpg" alt="배너 모음">
+                      <p class="fl">꼰띠키즈 배너</p>
+                </a>
+  	</div>
+	<div>
+             <div>
+                   <a href="">
+                         <img src="images/deagu_home.jpg" alt="코딩 따라하기">
+                         <p class="fl">코딩 따라하기</p>
+                   </a>
+              </div>
+	      <div>
+                   <a href="">
+                         <img src="" alt="웹사이트 만들기">
+                         <p class="fl">웹사이트 만들기</p>
+                   </a>
+               </div>
+	   </div>
+      </section>
+    
+    <section id="contact">
+                <div class="wrap">
+            <h1>contact</h1>
+            <address class="fl">
+                <div class="fl">
+                     <a href="mailto:sjy010216.gmail.com"><span>email</span> sjy010216.gmail.com</a>
+                </div>
+            </address>
+        </div>
+    </section>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+    <script>
+    var max_width=$("body").width();
+        if(max_width>800){}//pc
+        if(max_width<=800){}//모바일        
+        
+        $("#intro a .el").addClass("on")
+        $("#intro a").click(function(){
+            if(max_width>800){
+                $("html").animate({"scrollTop":1120},300);
+            }
+            if(max_width<=800){
+                $("html").animate({"scrollTop":900},300);
+            }
+            
+            return false;
+        });
+        
+        $("header li:nth-child(1) a").click(function(){
+            if(max_width>800){
+                $("html").animate({"scrollTop":1200},500);
+            }
+            if(max_width<=800){
+                $("html").animate({"scrollTop":1000},500);
+            }
+            
+            return false;
+        });
+        $("header li:nth-child(2) a").click(function(){
+            if(max_width>800){
+                $("html").animate({"scrollTop":2500},500);
+            }
+            if(max_width<=800){
+                $("html").animate({"scrollTop":2800},500);
+            }
+            
+            return false;
+        });
+        $("header li:nth-child(3) a").click(function(){
+            if(max_width>800){
+                $("html").animate({"scrollTop":3100},500);
+            }
+            if(max_width<=800){
+                $("html").animate({"scrollTop":3250},500);
+            }
+            
+            return false;
+        });
+        
+        var sn=$("#portfolio .slide .show li").length;
+        if(max_width>800){
+            $("#portfolio .slide .show").css({"width":380*(sn-1)+160*sn+550})
+            $("#portfolio .slide .show ul").css({"width":380*(sn-1)+160*sn+550})
+        }
+        if(max_width<=800){
+            $("#portfolio .slide .show").css({"width":100*sn+"vw"})
+            $("#portfolio .slide .show ul").css({"width":100*sn+"vw"})
+        }
+        
+        for( var i=1; i<=sn; i++ ){
+            if(i==1){
+               $("#portfolio .slide .pg").append("<li class='select'><a href='#'>"+i+"</a></li>")
+            } else {
+                $("#portfolio .slide .pg").append("<li><a href='#'>"+i+"</a></li>")
+            }
+        }
+        
+        var sl=0;
+        $("#portfolio .slide .next").click(function(){
+            sl++
+            if(sl>=sn){
+                sl=sn-1;
+            }
+            
+            if(max_width>800){
+                $("#portfolio .slide .show ul").animate({"left":-540*sl},500)
+            }
+            if(max_width<=800){
+                $("#portfolio .slide .show ul").animate({"left":-95*sl+"vw"},500)
+            }
+            $("#portfolio .slide .show li").eq(sl).addClass("select").siblings().removeClass("select")
+            $("#portfolio .slide .pg li").eq(sl).addClass("select").siblings().removeClass("select")
+            
+            return false;
+        });
+        $("#portfolio .slide .prev").click(function(){
+            sl--
+            if(sl<0){
+                sl=0;
+            }
+            
+            if(max_width>800){
+                $("#portfolio .slide .show ul").animate({"left":-540*sl},500)
+            }
+            if(max_width<=800){
+                $("#portfolio .slide .show ul").animate({"left":-95*sl+"vw"},500)
+            }
+            $("#portfolio .slide .show li").eq(sl).addClass("select").siblings().removeClass("select")
+            $("#portfolio .slide .pg li").eq(sl).addClass("select").siblings().removeClass("select")
+            
+            return false;
+        });
+        $("#portfolio .slide .pg li").click(function(){
+            sl=$(this).index();
+            
+            if(max_width>800){
+                $("#portfolio .slide .show ul").animate({"left":-540*sl},500)
+            }
+            if(max_width<=800){
+                $("#portfolio .slide .show ul").animate({"left":-95*sl+"vw"},500)
+            }
+            $(this).addClass("select").siblings().removeClass("select")
+             $("#portfolio .slide .show li").eq(sl).addClass("select").siblings().removeClass("select")
+            
+            return false;
+        });
+        
+        function word(){
+            $("#contact .word ul").animate({"top":-72},500,function(){
+                $(this).append($("#contact .word li:first-child"))
+                $(this).css({"top":0},500)
+            })    
+        }
+        setInterval(word,5000)
+        
+        
+        $(window).scroll(function(){
+            var wt=$(this).scrollTop();
+            
+            if(max_width>800){
+                if(wt>=500){
+                    $("#intro a .ment").css({"opacity":"0","display":"none"})
+                } else if(wt>=450){
+                    $("#intro a .ment").css({"opacity":"0.2","display":"block"})      
+                } else if(wt>=400){
+                    $("#intro a .ment").css({"opacity":"0.4"})      
+                } else if(wt>=350){
+                    $("#intro a .ment").css({"opacity":"0.6"})      
+                } else if(wt>=300){
+                    $("#intro a .ment").css({"opacity":"0.8"})      
+                } else {
+                    $("#intro a .ment").css({"opacity":"1"})
+                };
+            }
+            if(max_width<=800){
+                if(wt>=350){
+                    $("#intro a .ment").css({"opacity":"0","display":"none"})
+                } else if(wt>=320){
+                    $("#intro a .ment").css({"opacity":"0.2","display":"block"})      
+                } else if(wt>=280){
+                    $("#intro a .ment").css({"opacity":"0.4"})      
+                } else if(wt>=240){
+                    $("#intro a .ment").css({"opacity":"0.6"})      
+                } else if(wt>=200){
+                    $("#intro a .ment").css({"opacity":"0.8"})      
+                } else {
+                    $("#intro a .ment").css({"opacity":"1"})
+                };
+            }
+            
+            if(max_width>800){
+                if(wt>=1100){
+                    $("#about .ability .fl div").addClass("on")
+                } else{
+                    $("#about .ability .fl div").removeClass("on")
+                };
+            }
+            if(max_width<=800){
+                if(wt>=710){
+                    $("#about .ability .fl div").addClass("on")
+                } else{
+                    $("#about .ability .fl div").removeClass("on")
+                };
+            }
+            
+         console.log(wt)
+        });
+       
+        
+    </script>    
+</body>
+</html>
