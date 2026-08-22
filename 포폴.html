@@ -1,289 +1,269 @@
-<? include "header.html" ?>
-<body id="index">
-    <header>
-        <div class="wrap">
-            <ul>
-                <li>
-                    <a href="#">
-                        about
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        potfolio
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        contact
-                    </a>
-                </li>
-            </ul>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[이름] — Content · Web · UI/UX Designer</title>
+<meta name="description" content="상세페이지·배너 실무 2년차, 콘텐츠·웹·UI/UX 디자이너로의 이직 포트폴리오">
+
+<!-- 폰트: Pretendard(본문, 한글) / Archivo Black(디스플레이) / JetBrains Mono(스펙 라벨) -->
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav__logo">[이름]<span class="nav__logo-dim">.DESIGN</span></a>
+  <nav class="nav__links">
+    <a href="#career">Career</a>
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="nav__cta">연락하기</a>
+  <button class="nav__burger" id="navBurger" aria-label="메뉴 열기" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero__intro">
+      <p class="eyebrow">CAREER 2Y — 상세페이지 · 배너 → 웹 · UI/UX</p>
+      <h1 class="hero__title">
+        실무에서 다진 감각을,<br>
+        <span class="hero__title-accent">더 넓은 화면</span>으로.
+      </h1>
+      <p class="hero__desc">
+        2년간 상세페이지와 배너 디자인으로 전환율을 만들어온 경험을 바탕으로,
+        이제 콘텐츠·웹·UI/UX 영역으로 무대를 넓히고 있는 디자이너 [이름]입니다.
+      </p>
+      <div class="hero__actions">
+        <a href="#work" class="btn btn--primary">작업 보기</a>
+        <a href="#contact" class="btn btn--ghost">이메일 보내기</a>
+      </div>
+    </div>
+
+    <!-- 시그니처 요소: 실제 배너 광고 규격을 그대로 쓴 콜라주 -->
+    <div class="hero__specframes" aria-hidden="true">
+      <div class="specframe specframe--a">
+        <span class="specframe__dim">728 × 90</span>
+        <span class="specframe__label">LEADERBOARD</span>
+      </div>
+      <div class="specframe specframe--b">
+        <span class="specframe__dim">300 × 250</span>
+        <span class="specframe__label">MPU</span>
+      </div>
+      <div class="specframe specframe--c">
+        <span class="specframe__dim">160 × 600</span>
+        <span class="specframe__label">SKYSCRAPER</span>
+      </div>
+      <div class="specframe specframe--d">
+        <span class="specframe__dim">1080 × 1080</span>
+        <span class="specframe__label">DETAIL PAGE</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MARQUEE ================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>배너 디자인</span><span>·</span>
+      <span>상세페이지</span><span>·</span>
+      <span>콘텐츠 디자인</span><span>·</span>
+      <span>웹 디자인</span><span>·</span>
+      <span>UI/UX</span><span>·</span>
+      <span>배너 디자인</span><span>·</span>
+      <span>상세페이지</span><span>·</span>
+      <span>콘텐츠 디자인</span><span>·</span>
+      <span>웹 디자인</span><span>·</span>
+      <span>UI/UX</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- ================= CAREER ================= -->
+  <section class="career" id="career">
+    <p class="eyebrow">CAREER</p>
+    <h2 class="section-title">걸어온 길</h2>
+
+    <ol class="timeline">
+      <li class="timeline__item">
+        <span class="timeline__dim">STEP 01</span>
+        <div class="timeline__body">
+          <h3>디자인 학원 · 웹사이트 디자인 과정</h3>
+          <p class="timeline__period">[YYYY.MM – YYYY.MM]</p>
+          <p>실무 사이트를 그대로 재현하는 모작 연습을 통해 그리드, 타이포그래피,
+             레이아웃의 기본기를 다졌습니다. HTML/CSS 퍼블리싱을 함께 익혔습니다.</p>
         </div>
-    </header>
-    <div class="blank"></div>
-    
-       
-    <section id="about">
-        <div class="wrap">
-            <h1>about</h1>
-            <div class="info cl">
-                <img src="images/profil.jpg" alt="신지윤 증명사진">
-                <div class="right">
-                    <h2>신지윤<span>(만 26세)</span></h2>
-                    <div class="cl">
-                        <dl>
-                            <dt>자격증</dt>
-                            <dd>스프레드시트(엑셀)</dd>
-                            <dd>2종 보통 운전면허</dd>
-                            <dd>GTQ(포토샵) 1급</dd>
- 			    <dd>GTQ(포토샵) 1급</dd>	
-                        </dl>
-                        <dl>
-                            <dt>경력</dt>
-                            <dd>하임엔헷세드(아동복) 2년차</dd>
-			    <dd>상세페이지 및 배너 제작</dd>
-			    <dd>웹사이트 업로드 및 관리</dd>
-                            </dl>
-                    </div>
-                </div>
-            </div>
-            <ul class="ability">
-                <li>
-                   <p>사용툴</p>
-		  <img src="" alt="포토샵">
-		  <img src="" alt="일러스트">
-		  <img src="" alt="피그마">
-		  <img src="" alt="카페24">
-               </li>
-                <li>
-                   <p>사용기술</p>
-		  <img src="" alt="html">
-		  <img src="" alt="css">
-		  <img src="" alt="js">
-               </li>
-               </ul>
+      </li>
+      <li class="timeline__item">
+        <span class="timeline__dim">STEP 02</span>
+        <div class="timeline__body">
+          <h3>[회사명] · 웹디자이너</h3>
+          <p class="timeline__period">[YYYY.MM – YYYY.MM · 2년]</p>
+          <p>상세페이지와 프로모션 배너를 실무로 제작하며, 기획 의도를 전환으로
+             연결하는 디자인을 담당했습니다. 배너 [00]건, 상세페이지 [00]건 제작.</p>
         </div>
-    </section>
-    
-    <section id="portfolio">
-        <div class="wrap">
-            <h1>portfolio</h1>
-        </div>    
-  	<div class="slide">
-		<a href="">
-                      <img src="images/deagu_code.jpg" alt="배너 모음">
-                      <p class="fl">꼰띠키즈 배너</p>
-                </a>
-  	</div>
-	<div>
-             <div>
-                   <a href="">
-                         <img src="images/deagu_home.jpg" alt="코딩 따라하기">
-                         <p class="fl">코딩 따라하기</p>
-                   </a>
-              </div>
-	      <div>
-                   <a href="">
-                         <img src="" alt="웹사이트 만들기">
-                         <p class="fl">웹사이트 만들기</p>
-                   </a>
-               </div>
-	   </div>
-      </section>
-    
-    <section id="contact">
-                <div class="wrap">
-            <h1>contact</h1>
-            <address class="fl">
-                <div class="fl">
-                     <a href="mailto:sjy010216.gmail.com"><span>email</span> sjy010216.gmail.com</a>
-                </div>
-            </address>
+      </li>
+      <li class="timeline__item timeline__item--now">
+        <span class="timeline__dim">NOW</span>
+        <div class="timeline__body">
+          <h3>콘텐츠 · 웹 · UI/UX 디자이너로</h3>
+          <p class="timeline__period">진행 중</p>
+          <p>상세페이지에서 쌓은 스토리텔링 감각을 화면 단위의 경험 설계로
+             확장하기 위해 UI/UX 스터디를 병행하고 있습니다.</p>
         </div>
-    </section>
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/script.js"></script>
-    <script>
-    var max_width=$("body").width();
-        if(max_width>800){}//pc
-        if(max_width<=800){}//모바일        
-        
-        $("#intro a .el").addClass("on")
-        $("#intro a").click(function(){
-            if(max_width>800){
-                $("html").animate({"scrollTop":1120},300);
-            }
-            if(max_width<=800){
-                $("html").animate({"scrollTop":900},300);
-            }
-            
-            return false;
-        });
-        
-        $("header li:nth-child(1) a").click(function(){
-            if(max_width>800){
-                $("html").animate({"scrollTop":1200},500);
-            }
-            if(max_width<=800){
-                $("html").animate({"scrollTop":1000},500);
-            }
-            
-            return false;
-        });
-        $("header li:nth-child(2) a").click(function(){
-            if(max_width>800){
-                $("html").animate({"scrollTop":2500},500);
-            }
-            if(max_width<=800){
-                $("html").animate({"scrollTop":2800},500);
-            }
-            
-            return false;
-        });
-        $("header li:nth-child(3) a").click(function(){
-            if(max_width>800){
-                $("html").animate({"scrollTop":3100},500);
-            }
-            if(max_width<=800){
-                $("html").animate({"scrollTop":3250},500);
-            }
-            
-            return false;
-        });
-        
-        var sn=$("#portfolio .slide .show li").length;
-        if(max_width>800){
-            $("#portfolio .slide .show").css({"width":380*(sn-1)+160*sn+550})
-            $("#portfolio .slide .show ul").css({"width":380*(sn-1)+160*sn+550})
-        }
-        if(max_width<=800){
-            $("#portfolio .slide .show").css({"width":100*sn+"vw"})
-            $("#portfolio .slide .show ul").css({"width":100*sn+"vw"})
-        }
-        
-        for( var i=1; i<=sn; i++ ){
-            if(i==1){
-               $("#portfolio .slide .pg").append("<li class='select'><a href='#'>"+i+"</a></li>")
-            } else {
-                $("#portfolio .slide .pg").append("<li><a href='#'>"+i+"</a></li>")
-            }
-        }
-        
-        var sl=0;
-        $("#portfolio .slide .next").click(function(){
-            sl++
-            if(sl>=sn){
-                sl=sn-1;
-            }
-            
-            if(max_width>800){
-                $("#portfolio .slide .show ul").animate({"left":-540*sl},500)
-            }
-            if(max_width<=800){
-                $("#portfolio .slide .show ul").animate({"left":-95*sl+"vw"},500)
-            }
-            $("#portfolio .slide .show li").eq(sl).addClass("select").siblings().removeClass("select")
-            $("#portfolio .slide .pg li").eq(sl).addClass("select").siblings().removeClass("select")
-            
-            return false;
-        });
-        $("#portfolio .slide .prev").click(function(){
-            sl--
-            if(sl<0){
-                sl=0;
-            }
-            
-            if(max_width>800){
-                $("#portfolio .slide .show ul").animate({"left":-540*sl},500)
-            }
-            if(max_width<=800){
-                $("#portfolio .slide .show ul").animate({"left":-95*sl+"vw"},500)
-            }
-            $("#portfolio .slide .show li").eq(sl).addClass("select").siblings().removeClass("select")
-            $("#portfolio .slide .pg li").eq(sl).addClass("select").siblings().removeClass("select")
-            
-            return false;
-        });
-        $("#portfolio .slide .pg li").click(function(){
-            sl=$(this).index();
-            
-            if(max_width>800){
-                $("#portfolio .slide .show ul").animate({"left":-540*sl},500)
-            }
-            if(max_width<=800){
-                $("#portfolio .slide .show ul").animate({"left":-95*sl+"vw"},500)
-            }
-            $(this).addClass("select").siblings().removeClass("select")
-             $("#portfolio .slide .show li").eq(sl).addClass("select").siblings().removeClass("select")
-            
-            return false;
-        });
-        
-        function word(){
-            $("#contact .word ul").animate({"top":-72},500,function(){
-                $(this).append($("#contact .word li:first-child"))
-                $(this).css({"top":0},500)
-            })    
-        }
-        setInterval(word,5000)
-        
-        
-        $(window).scroll(function(){
-            var wt=$(this).scrollTop();
-            
-            if(max_width>800){
-                if(wt>=500){
-                    $("#intro a .ment").css({"opacity":"0","display":"none"})
-                } else if(wt>=450){
-                    $("#intro a .ment").css({"opacity":"0.2","display":"block"})      
-                } else if(wt>=400){
-                    $("#intro a .ment").css({"opacity":"0.4"})      
-                } else if(wt>=350){
-                    $("#intro a .ment").css({"opacity":"0.6"})      
-                } else if(wt>=300){
-                    $("#intro a .ment").css({"opacity":"0.8"})      
-                } else {
-                    $("#intro a .ment").css({"opacity":"1"})
-                };
-            }
-            if(max_width<=800){
-                if(wt>=350){
-                    $("#intro a .ment").css({"opacity":"0","display":"none"})
-                } else if(wt>=320){
-                    $("#intro a .ment").css({"opacity":"0.2","display":"block"})      
-                } else if(wt>=280){
-                    $("#intro a .ment").css({"opacity":"0.4"})      
-                } else if(wt>=240){
-                    $("#intro a .ment").css({"opacity":"0.6"})      
-                } else if(wt>=200){
-                    $("#intro a .ment").css({"opacity":"0.8"})      
-                } else {
-                    $("#intro a .ment").css({"opacity":"1"})
-                };
-            }
-            
-            if(max_width>800){
-                if(wt>=1100){
-                    $("#about .ability .fl div").addClass("on")
-                } else{
-                    $("#about .ability .fl div").removeClass("on")
-                };
-            }
-            if(max_width<=800){
-                if(wt>=710){
-                    $("#about .ability .fl div").addClass("on")
-                } else{
-                    $("#about .ability .fl div").removeClass("on")
-                };
-            }
-            
-         console.log(wt)
-        });
-       
-        
-    </script>    
+      </li>
+    </ol>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about" id="about">
+    <p class="eyebrow">ABOUT</p>
+    <div class="about__grid">
+      <p class="about__lead">
+        전환을 만드는 디자인에서,<br>
+        경험을 설계하는 디자인으로.
+      </p>
+      <div class="about__body">
+        <p>
+          2년간 실무에서 상세페이지와 배너를 만들며 "왜 눌러야 하는지"를
+          먼저 고민하는 습관을 길렀습니다. 이 감각을 바탕으로 콘텐츠 기획,
+          웹사이트 전반의 흐름, UI/UX 설계까지 다룰 수 있는 디자이너로
+          성장하고자 합니다.
+        </p>
+        <ul class="about__facts">
+          <li><span>02</span>년 실무 경력 (상세페이지 · 배너)</li>
+          <li><span>1</span>개 학원 웹디자인 과정 이수</li>
+          <li><span>N</span>건 개인 UI/UX 스터디 프로젝트</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORK ================= -->
+  <section class="work" id="work">
+    <p class="eyebrow">WORK</p>
+    <h2 class="section-title">프로젝트</h2>
+
+    <h3 class="work__group-title">실무 프로젝트 <span>[회사명]에서 진행한 작업</span></h3>
+    <div class="work__grid">
+
+      <article class="card">
+        <div class="card__frame card__frame--wide">
+          <span class="card__tag card__tag--work">실무</span>
+          <span class="card__dim">728 × 90</span>
+        </div>
+        <h3 class="card__title">시즌 프로모션 배너</h3>
+        <p class="card__meta">배너 디자인 · 메인 홈 노출 · [YYYY]</p>
+      </article>
+
+      <article class="card">
+        <div class="card__frame card__frame--tall">
+          <span class="card__tag card__tag--work">실무</span>
+          <span class="card__dim">1080 × 2400</span>
+        </div>
+        <h3 class="card__title">신제품 런칭 상세페이지</h3>
+        <p class="card__meta">상세페이지 · 기획 · 디자인 · [YYYY]</p>
+      </article>
+
+      <article class="card">
+        <div class="card__frame card__frame--square">
+          <span class="card__tag card__tag--work">실무</span>
+          <span class="card__dim">300 × 250</span>
+        </div>
+        <h3 class="card__title">이벤트 배너 세트 (A/B 테스트)</h3>
+        <p class="card__meta">배너 디자인 · 3종 제작 · [YYYY]</p>
+      </article>
+
+    </div>
+
+    <h3 class="work__group-title">스터디 프로젝트 <span>지향 분야를 위한 개인 학습</span></h3>
+    <div class="work__grid">
+
+      <article class="card">
+        <div class="card__frame card__frame--square">
+          <span class="card__tag card__tag--study">스터디</span>
+          <span class="card__dim">1440 × 1024</span>
+        </div>
+        <h3 class="card__title">이커머스 앱 UI 리디자인</h3>
+        <p class="card__meta">UI/UX · 개인 스터디</p>
+      </article>
+
+      <article class="card">
+        <div class="card__frame card__frame--wide">
+          <span class="card__tag card__tag--study">스터디</span>
+          <span class="card__dim">1920 × 1080</span>
+        </div>
+        <h3 class="card__title">브랜드 웹사이트 UX 개선 제안</h3>
+        <p class="card__meta">웹 디자인 · 개인 스터디</p>
+      </article>
+
+      <article class="card">
+        <div class="card__frame card__frame--tall">
+          <span class="card__tag card__tag--study">모작</span>
+          <span class="card__dim">1080 × 1920</span>
+        </div>
+        <h3 class="card__title">실무 사이트 모작 연습</h3>
+        <p class="card__meta">웹디자인 학원 과정 · 모작</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="skills" id="skills">
+    <p class="eyebrow">SKILLS</p>
+    <h2 class="section-title">사용 툴 &amp; 역량</h2>
+    <div class="skills__grid">
+      <div class="skill">
+        <span class="skill__dim">DESIGN</span>
+        <p>Photoshop, Illustrator, Figma</p>
+      </div>
+      <div class="skill">
+        <span class="skill__dim">PUBLISHING</span>
+        <p>HTML, CSS, 반응형 퍼블리싱</p>
+      </div>
+      <div class="skill">
+        <span class="skill__dim">CONTENT</span>
+        <p>상세페이지 스토리텔링, 배너 카피라이팅</p>
+      </div>
+      <div class="skill">
+        <span class="skill__dim">UI/UX (학습중)</span>
+        <p>와이어프레임, 유저 플로우, 프로토타이핑</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+    <p class="eyebrow">CONTACT</p>
+    <h2 class="contact__title">
+      새로운 팀에서<br>더 넓은 화면을 그리고 싶습니다.
+    </h2>
+    <a href="mailto:hello@example.com" class="contact__email">hello@example.com</a>
+    <div class="contact__links">
+      <a href="#">Instagram</a>
+      <a href="#">Behance</a>
+      <a href="#">GitHub</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© 2026 [이름]. All rights reserved.</span>
+  <a href="#top">TOP ↑</a>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
+
